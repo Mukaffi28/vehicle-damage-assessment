@@ -1,0 +1,80 @@
+.upload-container {
+  background: white;
+  border-radius: 12px;
+  padding: 3rem 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.upload-container h2 {
+  color: #333;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+}
+
+.upload-area {
+  border: 3px dashed #667eea;
+  border-radius: 12px;
+  padding: 4rem 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+}
+
+.upload-area:hover {
+  border-color: #764ba2;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+  transform: translateY(-2px);
+}
+
+.upload-area.drag-over {
+  border-color: #764ba2;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.15) 0%, rgba(118, 75, 162, 0.15) 100%);
+  transform: scale(1.02);
+}
+
+.upload-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.upload-area h3 {
+  color: #333;
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.upload-area p {
+  color: #666;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.upload-info {
+  color: #999 !important;
+  font-size: 0.875rem !important;
+  margin-top: 1rem !important;
+}
+
+@media (max-width: 768px) {
+  .upload-container {
+    padding: 2rem 1rem;
+  }
+
+  .upload-area {
+    padding: 3rem 1.5rem;
+  }
+
+  .upload-icon {
+    font-size: 3rem;
+  }
+
+  .upload-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .upload-area h3 {
+    font-size: 1.1rem;
+  }
+}

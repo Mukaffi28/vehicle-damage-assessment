@@ -1,0 +1,179 @@
+.results-container {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: slideIn 0.5s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.results-container h2 {
+  color: #333;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.result-card {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 1.5rem;
+  border: 2px solid #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+.result-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.card-icon {
+  font-size: 1.5rem;
+}
+
+.card-header h3 {
+  color: #555;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.card-content {
+  padding-top: 0.5rem;
+}
+
+/* Status Card */
+.status-card.damage-yes {
+  border-color: #ff9800;
+  background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+}
+
+.status-card.damage-no {
+  border-color: #4caf50;
+  background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+}
+
+.status-text {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
+}
+
+/* Severity Card */
+.severity-badge {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Damage Types Card */
+.damage-types-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.damage-type-badge {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 2px 6px rgba(102, 126, 234, 0.3);
+}
+
+.damage-type-icon {
+  font-size: 1.1rem;
+}
+
+/* Location Card */
+.location-text {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+/* Description Card */
+.description-card {
+  grid-column: 1 / -1;
+}
+
+.description-text {
+  font-size: 1.05rem;
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .results-container {
+    padding: 1.5rem;
+  }
+
+  .results-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .results-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .result-card {
+    padding: 1.25rem;
+  }
+
+  .status-text {
+    font-size: 1.1rem;
+  }
+
+  .severity-badge {
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  .location-text {
+    font-size: 1.1rem;
+  }
+
+  .description-text {
+    font-size: 1rem;
+  }
+}

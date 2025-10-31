@@ -1,0 +1,16 @@
+.bbox-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.bbox-wrapper > img.preview-image {
+  display: block;
+}
+
+.bbox-rect {
+  position: absolute;
+  border: 3px solid #ff1744; /* vivid red */
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.15) inset;
+  border-radius: 2px;
+  pointer-events: none; /* let clicks fall through */
+}
